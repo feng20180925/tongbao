@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.example</groupId>
+    <artifactId>tongbao-parent</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>tongbao-api</module>
+        <module>tongbao-api/tongbao-oms-api</module>
+        <module>dongbao-common</module>
+        <module>dongbao-common/dongbao-common-base</module>
+        <module>dongbao-common/dongbao-common-util</module>
+        <module>tongbao-api/dongbao-pms-api</module>
+        <module>tongbao-api/dongbao-ums-api</module>
+        <module>tongbao-api/dongbao-pay-api</module>
+        <module>tongbao-api/dongbao-cart-api</module>
+        <module>tongbao-api/dongbao-dictionary-api</module>
+        <module>tongbao-api/dongbao-sms-api</module>
+        <module>tongbao-api/dongbao-cms-api</module>
+        <module>dongbao-service</module>
+        <module>dongbao-service/dongbao-oms</module>
+        <module>dongbao-service/dongbao-pms</module>
+        <module>dongbao-service/dongbao-ums</module>
+        <module>dongbao-service/dongbao-pay</module>
+        <module>dongbao-service/dongbao-cart</module>
+        <module>dongbao-service/dongbao-dictionary</module>
+        <module>dongbao-service/dongbao-sms</module>
+        <module>dongbao-service/dongbao-cms</module>
+        <module>dongbao-application</module>
+        <module>dongbao-portal-web</module>
+        <module>dongbao-job</module>
+    </modules>
+
+
+</project>
