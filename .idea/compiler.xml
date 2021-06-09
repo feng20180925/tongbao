@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="dongbao-application" target="1.8" />
+      <module name="dongbao-cart" target="1.8" />
+      <module name="dongbao-cart-api" target="1.8" />
+      <module name="dongbao-cms" target="1.8" />
+      <module name="dongbao-cms-api" target="1.8" />
+      <module name="dongbao-common" target="1.8" />
+      <module name="dongbao-common-base" target="1.8" />
+      <module name="dongbao-common-util" target="1.8" />
+      <module name="dongbao-dictionary" target="1.8" />
+      <module name="dongbao-dictionary-api" target="1.8" />
+      <module name="dongbao-job" target="1.8" />
+      <module name="dongbao-manager-web" target="1.8" />
+      <module name="dongbao-oms" target="1.8" />
+      <module name="dongbao-pay" target="1.8" />
+      <module name="dongbao-pay-api" target="1.8" />
+      <module name="dongbao-pms" target="1.8" />
+      <module name="dongbao-pms-api" target="1.8" />
+      <module name="dongbao-portal-web" target="1.8" />
+      <module name="dongbao-service" target="1.8" />
+      <module name="dongbao-sms" target="1.8" />
+      <module name="dongbao-sms-api" target="1.8" />
+      <module name="dongbao-ums" target="1.8" />
+      <module name="dongbao-ums-api" target="1.8" />
+      <module name="tongbao-api" target="1.8" />
+      <module name="tongbao-oms-api" target="1.8" />
+      <module name="tongbao-parent" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="tongbao-api" options="-parameters" />
+    </option>
+  </component>
+</project>
