@@ -1,5 +1,6 @@
 package com.dongbao.ums.service.impl;
 
+import com.dongbao.api.ums.entity.dto.UmsMemberLoginParamDTO;
 import com.dongbao.api.ums.entity.dto.UmsMemberRegisterParamDTO;
 import com.dongbao.api.ums.mapper.UmsMemberMapper;
 import com.dongbao.common.util.BCryptPasswordEncoderUtils;
@@ -9,6 +10,7 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
 
 /**
  * <p>
@@ -33,6 +35,22 @@ public class UmsMemberServiceImpl extends ServiceImpl<UmsMemberMapper, UmsMember
         System.out.println(us);
 
         return memberMapper.insert(us)==1?true:false;
+    }
+
+
+    @Override
+    public UmsMemberLoginParamDTO doLogin(UmsMemberLoginParamDTO umsMemberLoginParamDTO) {
+        String username = umsMemberLoginParamDTO.getUsername();
+        if(StringUtils.isEmpty(username)){
+            return null;
+        }
+        UmsMember us=memberMapper.selectByUsername(username);
+        if(BCryptPasswordEncoderUtils.getMatch(umsMemberLoginParamDTO.getPassword(),us.getPassword())){
+            //密码验证通过
+            BeanUtils.copyProperties(us,umsMemberLoginParamDTO);
+            return umsMemberLoginParamDTO;
+        }
+        return null;
     }
 
 }

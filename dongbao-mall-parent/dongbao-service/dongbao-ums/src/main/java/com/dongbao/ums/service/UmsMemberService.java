@@ -2,6 +2,7 @@ package com.dongbao.ums.service;
 
 import com.dongbao.api.ums.entity.UmsMember;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.dongbao.api.ums.entity.dto.UmsMemberLoginParamDTO;
 import com.dongbao.api.ums.entity.dto.UmsMemberRegisterParamDTO;
 
 /**
@@ -16,4 +17,5 @@ public interface UmsMemberService extends IService<UmsMember> {
 
     public boolean register(UmsMemberRegisterParamDTO umsMemberRegisterParamDTO);
 
+    UmsMemberLoginParamDTO doLogin(UmsMemberLoginParamDTO umsMemberLoginParamDTO);
 }

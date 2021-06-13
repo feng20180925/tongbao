@@ -2,6 +2,7 @@ package com.dongbao.protal.web.controller;
 
 
 import com.dongbao.api.ums.entity.UmsMember;
+import com.dongbao.api.ums.entity.dto.UmsMemberLoginParamDTO;
 import com.dongbao.api.ums.entity.dto.UmsMemberRegisterParamDTO;
 import com.dongbao.ums.service.UmsMemberService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,10 +33,19 @@ public class UmsMemberController {
 
     @PostMapping("/register")
     public String getRegister(@RequestBody UmsMemberRegisterParamDTO umsMemberRegisterParamDTO){
-        System.out.println(umsMemberRegisterParamDTO);
         boolean flag = service.register(umsMemberRegisterParamDTO);
         if(flag){
             return "注册成功";
+        }
+        return "注册失败";
+    }
+
+
+    @PutMapping("/login")
+    public String doLogin(@RequestBody UmsMemberLoginParamDTO umsMemberLoginParamDTO){
+        UmsMemberLoginParamDTO loginParam = service.doLogin(umsMemberLoginParamDTO);
+        if(loginParam!=null){
+            return "登录成功";
         }
         return "注册失败";
     }

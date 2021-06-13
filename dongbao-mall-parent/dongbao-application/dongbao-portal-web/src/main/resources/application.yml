@@ -13,8 +13,7 @@ mybatis-plus:
     db-config:
       logic-delete-value: 1
       logic-not-delete-value: 0
-  mapper-locations:
-    - classpath*:/com/dongbao/api/ums/mapper/xml/*.xml
+  mapper-locations: classpath*:/com/dongbao/api/ums/mapper/xml/*.xml
   type-aliases-package: com.dongbao.api.ums.entity
 server:
   port: 8083
