@@ -16,6 +16,9 @@
         <java.version>1.8</java.version>
     </properties>
     <dependencies>
+
+
+
         <dependency>
             <groupId>com.xfeng</groupId>
             <artifactId>dongbao-ums-api</artifactId>
@@ -25,7 +28,6 @@
             <groupId>com.xfeng</groupId>
             <artifactId>dongbao-common-util</artifactId>
             <version>0.0.1-SNAPSHOT</version>
-            <scope>compile</scope>
         </dependency>
 
 

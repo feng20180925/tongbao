@@ -1,5 +1,6 @@
 package com.dongbao.common.base.result;
 
+import com.dongbao.common.base.enums.StateCodeEnum;
 import lombok.Builder;
 import lombok.Data;
 
@@ -32,9 +33,20 @@ public class ResultWrapper<T> implements Serializable {
      */
     private T data;
 
-    //返回成功的包装
+    /**
+     * 返回成功的包装
+     * @return
+     */
     public static ResultWrapper.ResultWrapperBuilder getSuccessBuildre(){
+        return ResultWrapper.builder().code(StateCodeEnum.SUCCESS.getCode()).msg(StateCodeEnum.SUCCESS.getMsg());
+    }
 
-        return null;
+
+    /**
+     * 返回失败的包装
+     * @return
+     */
+    public static ResultWrapper.ResultWrapperBuilder getFailBuildre(){
+        return ResultWrapper.builder().code(StateCodeEnum.FAIL.getCode()).msg(StateCodeEnum.FAIL.getMsg());
     }
 }

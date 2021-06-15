@@ -1,4 +1,4 @@
-package com.dongbao.common.base;
+package com.dongbao.common;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

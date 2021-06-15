@@ -1,15 +1,21 @@
 package com.dongbao.api.ums.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
+
 import java.util.Date;
+
 import com.baomidou.mybatisplus.annotation.Version;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.FieldFill;
 import com.baomidou.mybatisplus.annotation.TableField;
+
 import java.io.Serializable;
+
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
+import org.hibernate.validator.constraints.NotEmpty;
+
 
 /**
  * <p>
@@ -21,16 +27,17 @@ import lombok.ToString;
  */
 @Data
 @ToString
-@EqualsAndHashCode(callSuper = false)
 public class UmsMember implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-      @TableId(value = "id", type = IdType.AUTO)
+    @TableId(value = "id", type = IdType.AUTO)
     private Long id;
+
 
     private String username;
 
+    @NotEmpty(message = "密码不能为空")
     private String password;
 
     /**
@@ -56,7 +63,7 @@ public class UmsMember implements Serializable {
     /**
      * 创建时间
      */
-      @TableField(fill = FieldFill.INSERT)
+    @TableField(fill = FieldFill.INSERT)
     private Date gmtCreate;
 
     /**
@@ -69,7 +76,7 @@ public class UmsMember implements Serializable {
      */
     private Integer status;
 
-      @TableField(fill = FieldFill.INSERT_UPDATE)
+    @TableField(fill = FieldFill.INSERT_UPDATE)
     private Date gmtModified;
 
 

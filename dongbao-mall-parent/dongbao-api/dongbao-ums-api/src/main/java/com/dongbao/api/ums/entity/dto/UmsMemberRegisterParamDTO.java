@@ -3,6 +3,9 @@ package com.dongbao.api.ums.entity.dto;
 import lombok.Data;
 import lombok.ToString;
 
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotEmpty;
+
 /**
  * @Description: dto前台参数
  * @ClassName: UmsMemberRegisterParamDTO
@@ -15,10 +18,14 @@ import lombok.ToString;
 @ToString
 public class UmsMemberRegisterParamDTO {
 
+    @NotEmpty(message = "用户名不能为空")
     private String username;
 
+    @NotEmpty(message = "用户名不能为空")
     private String password;
     private String icon;
+
+    @Email(message = "邮箱格式错误")
     private String email;
     private String nickName;
 

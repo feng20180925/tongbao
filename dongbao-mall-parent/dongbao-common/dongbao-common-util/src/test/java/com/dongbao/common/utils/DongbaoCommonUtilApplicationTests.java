@@ -1,4 +1,4 @@
-package com.dongbao.common.base;
+package com.dongbao.common.utils;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
